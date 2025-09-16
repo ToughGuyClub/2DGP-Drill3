@@ -1,5 +1,5 @@
 from pico2d import *
-
+import math
 open_canvas()
 
 boy = load_image('character.png')
@@ -11,9 +11,15 @@ def move_rectangle():
 
 def move_circle():
     print("move circle")
-    clear_canvas_now()
-    boy.draw_now(400,300)
-    delay(1)
+    r=210
+    for deg in range(0, 360):
+
+
+        x = 400 + r * math.cos(math.radians(deg))
+        y = 300 + r * math.sin(math.radians(deg))
+        clear_canvas_now()
+        boy.draw_now(x, y)
+        delay(0.01)
     pass
 
 
