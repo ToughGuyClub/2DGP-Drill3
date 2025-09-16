@@ -4,10 +4,12 @@ open_canvas()
 
 
 def move_rectangle():
+    print("move rectangle")
     pass
 
 
 def move_circle():
+    print("move circle")
     pass
 
 
