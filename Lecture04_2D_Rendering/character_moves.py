@@ -13,6 +13,7 @@ def move_right(x):
         x += 5
         draw_boy(x, 90)
 
+
     pass
 
 
@@ -20,6 +21,7 @@ def move_top():
     print('moving top')
     for y in range(90, 550, 5):
         draw_boy(750, y)
+
     pass
 
 
@@ -27,6 +29,7 @@ def move_left():
     print('moving left')
     for x in range(750, 50, -5):
         draw_boy(x, 550)
+
     pass
 
 
@@ -34,6 +37,7 @@ def move_bottom():
     print('moving bottom')
     for y in range(550, 90, -5):
         draw_boy(50, y)
+
     pass
 
 
@@ -54,12 +58,14 @@ def move_circle():
         x = 400 + r * math.cos(math.radians(deg))
         y = 300 + r * math.sin(math.radians(deg))
         draw_boy(x, y)
+
     pass
 
 
 def draw_boy(x: float, y: float):
     clear_canvas_now()
     boy.draw_now(x, y)
+    grass.draw_now(400, 30)
     delay(0.01)
 
 
@@ -69,7 +75,7 @@ def move_lefttop():
         clear_canvas_now()
         x = 750 - i * 5
         y = 90 + i * (460 / 70)
-        boy.draw_now(x, y)
+        draw_boy(x,y)
         delay(0.01)
     pass
 
@@ -80,7 +86,7 @@ def move_leftbottom():
         clear_canvas_now()
         x = 400 - i * 5
         y = 550 - i * (460 / 70)
-        boy.draw_now(x, y)
+        draw_boy(x, y)
         delay(0.01)
     pass
 
