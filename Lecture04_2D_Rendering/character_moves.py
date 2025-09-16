@@ -12,9 +12,7 @@ def move_rectangle():
 def move_circle():
     print("move circle")
     r=210
-    for deg in range(0, 360):
-
-
+    for deg in range(270, -90,-1):
         x = 400 + r * math.cos(math.radians(deg))
         y = 300 + r * math.sin(math.radians(deg))
         clear_canvas_now()
